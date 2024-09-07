@@ -38,9 +38,26 @@ class MainApp extends StatelessWidget {
           ],
           child: MaterialApp(
             theme: ThemeData(
-              appBarTheme: const AppBarTheme(
-                  backgroundColor: Color(0xff121212),
-                  iconTheme: IconThemeData(color: Colors.white)),
+              primaryTextTheme: const TextTheme(
+                bodyLarge: TextStyle(color: Colors.white),
+                bodyMedium: TextStyle(color: Colors.white),
+                bodySmall: TextStyle(color: Colors.white),
+                headlineLarge: TextStyle(color: Colors.white),
+                headlineMedium: TextStyle(color: Colors.white),
+                headlineSmall: TextStyle(color: Colors.white),
+                titleLarge: TextStyle(color: Colors.white),
+                titleMedium: TextStyle(color: Colors.white),
+                titleSmall: TextStyle(color: Colors.white),
+                labelLarge: TextStyle(color: Colors.white),
+                labelMedium: TextStyle(color: Colors.white),
+                labelSmall: TextStyle(color: Colors.white),
+              ),
+              appBarTheme: AppBarTheme(
+                  centerTitle: true,
+                  titleTextStyle:
+                      TextStyle(color: Colors.white, fontSize: 20.sp),
+                  backgroundColor: const Color(0xff121212),
+                  iconTheme: const IconThemeData(color: Colors.white)),
               scaffoldBackgroundColor: const Color(0xff121212),
               textTheme: const TextTheme(
                 bodyLarge: TextStyle(color: Colors.white),
