@@ -57,11 +57,11 @@ class _CalendarScreenState extends State<CalendarScreen> {
               ),
             ),
             calendarStyle: CalendarStyle(
+              
               defaultTextStyle: TextStyle(color: Colors.white),
               weekendTextStyle: TextStyle(color: Colors.red),
               selectedDecoration: BoxDecoration(
                 color: Colors.blue,
-                shape: BoxShape.circle,
               ),
               todayDecoration: BoxDecoration(
                 color: Colors.purple,

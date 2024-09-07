@@ -75,20 +75,9 @@ class MainApp extends StatelessWidget {
               ),
               primaryColor: const Color(0xff8875FF),
             ),
-            home: StreamBuilder<User?>(
-                stream: FirebaseAuth.instance.authStateChanges(),
-                builder: (context, snapshot) {
-                  if (snapshot.connectionState == ConnectionState.waiting) {
-                    return const MainScreen();
-                  }
-                  if (snapshot.data == null) {
-                    return const Onbodring();
-                  }
-                  if (snapshot.data != null) {
-                    return const ManegePage();
-                  }
-                  return const ManegePage();
-                }),
+            home: FirebaseAuth.instance.currentUser == null
+                ? Onbodring()
+                : ManagePage(),
           ),
         );
       },

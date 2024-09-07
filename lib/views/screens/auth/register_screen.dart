@@ -42,6 +42,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
         listener: (context, state) {
           if (state is AuthError) {
             Navigator.pop(context);
+            Navigator.pop(context);
+
             showDialog(
               context: context,
               builder: (context) => AlertDialog(
@@ -59,11 +61,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
           }
           if (state is Authenticated) {
             if (state is Authenticated) {
-              Navigator.pushReplacement(
+              Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const ManegePage(),
+                  builder: (context) => const ManagePage(),
                 ),
+                (route) => false,
               );
             }
           }

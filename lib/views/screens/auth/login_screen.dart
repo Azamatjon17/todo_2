@@ -49,11 +49,12 @@ class _LoginScreenState extends State<LoginScreen> {
           }
           if (state is Authenticated) {
             Navigator.pop(context);
-            Navigator.pushReplacement(
+            Navigator.pushAndRemoveUntil(
               context,
               MaterialPageRoute(
-                builder: (context) => const ManegePage(),
+                builder: (context) => const ManagePage(),
               ),
+              (route) => false,
             );
           }
         },

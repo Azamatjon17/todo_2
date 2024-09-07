@@ -1,25 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:todo/views/screens/add_screen/add_screen.dart';
 import 'package:todo/views/screens/calendar/calendar_screen.dart';
 import 'package:todo/views/screens/focuse/focuse_screen.dart';
 import 'package:todo/views/screens/home/home_screen.dart';
 import 'package:todo/views/screens/profile/profile_screen.dart';
 
-class ManegePage extends StatefulWidget {
-  const ManegePage({super.key});
+class ManagePage extends StatefulWidget {
+  const ManagePage({super.key});
 
   @override
-  State<ManegePage> createState() => _ManegePageState();
+  State<ManagePage> createState() => _ManagePageState();
 }
 
-class _ManegePageState extends State<ManegePage> {
+class _ManagePageState extends State<ManagePage> {
   int currentPage = 0;
-  List<Widget> screens = [
+  List<Widget> screens = const [
     HomeScreen(),
     CalendarScreen(),
     FocuseScreen(),
     ProfileScreen(),
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +43,7 @@ class _ManegePageState extends State<ManegePage> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Index',
+            label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.calendar_today),
@@ -58,7 +60,12 @@ class _ManegePageState extends State<ManegePage> {
         ],
       ),
       floatingActionButton: InkWell(
-        onTap: () {},
+        onTap: () {
+          showModalBottomSheet(
+            context: context,
+            builder: (context) => AddScreen(),
+          );
+        },
         child: Container(
           height: 50.h,
           width: 50.w,
