@@ -76,8 +76,8 @@ class MainApp extends StatelessWidget {
               primaryColor: const Color(0xff8875FF),
             ),
             home: FirebaseAuth.instance.currentUser == null
-                ? Onbodring()
-                : ManagePage(),
+                ? const Onbodring()
+                : const ManagePage(),
           ),
         );
       },
