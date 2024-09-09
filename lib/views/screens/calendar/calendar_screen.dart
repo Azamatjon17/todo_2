@@ -56,8 +56,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                 color: Colors.black,
               ),
             ),
-            calendarStyle: CalendarStyle(
-              
+            calendarStyle: const CalendarStyle(
               defaultTextStyle: TextStyle(color: Colors.white),
               weekendTextStyle: TextStyle(color: Colors.red),
               selectedDecoration: BoxDecoration(
@@ -68,7 +67,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                 shape: BoxShape.circle,
               ),
             ),
-            daysOfWeekStyle: DaysOfWeekStyle(
+            daysOfWeekStyle: const DaysOfWeekStyle(
               weekdayStyle: TextStyle(color: Colors.white),
               weekendStyle: TextStyle(color: Colors.red),
             ),
