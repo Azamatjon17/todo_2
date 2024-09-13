@@ -7,7 +7,6 @@ import 'package:todo/bloc/auth_bloc/auth_bloc.dart';
 import 'package:todo/firebase_options.dart';
 import 'package:todo/services/authentication_service.dart';
 import 'package:todo/views/screens/manege_page.dart';
-import 'package:todo/views/screens/onbording/main_screen.dart';
 import 'package:todo/views/screens/onbording/onbodring.dart';
 
 void main() async {

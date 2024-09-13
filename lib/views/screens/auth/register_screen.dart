@@ -60,16 +60,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
             showLoadingDialog(context);
           }
           if (state is Authenticated) {
-            if (state is Authenticated) {
-              Navigator.pushAndRemoveUntil(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const ManagePage(),
-                ),
-                (route) => false,
-              );
-            }
-          }
+            Navigator.pushAndRemoveUntil(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const ManagePage(),
+              ),
+              (route) => false,
+            );
+                    }
         },
         child: Center(
           child: SingleChildScrollView(
