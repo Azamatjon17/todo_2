@@ -62,6 +62,7 @@ class _ManagePageState extends State<ManagePage> {
       floatingActionButton: InkWell(
         onTap: () {
           showModalBottomSheet(
+            isScrollControlled: true,
             context: context,
             builder: (context) => AddScreen(),
           );
