@@ -80,6 +80,8 @@ class _ManagePageState extends State<ManagePage> {
           ),
         ),
       ),
+      floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
+      
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
